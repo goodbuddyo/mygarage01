@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MyGarage01 is an app for logging auto service entries using React on Rails and the Foundation Framework
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version - 2.6.3p62 (2019-04-16 revision 67580) (RVM v 1.29.8 )
 
-* System dependencies
+* System dependencies 
+  
+  ruby (rvm, gpg, curl)
+  rails
+  postgresql
+  sass-rails
+  devise
 
 * Configuration
-
 * Database creation
-
 * Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+On Dev: 
+  bundle install
+  rails s
+  localhost:3000
