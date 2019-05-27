@@ -1,1 +1,82 @@
-<h1>Hello World!</h1>
+<!-- /home/index.html.erb -->
+
+
+  <div class="grid-x grid-margin-x">
+
+    <div class="cell medium-12 large-12 columns mg-vehicle-wrapper">
+    <!-- =======   modal - reveal starts  ===========  -->
+              <div class="reveal mg-vehiclemodal" id="vehicleModal1" data-reveal>
+                <h3> Add/Edit a vehicle</h3>
+                <button class="close-button" data-close aria-label="Close modal" type="button">  <span aria-hidden="true">&times;</span>
+                </button>
+                <form>
+                  <div class="row">
+                    <div class="large-4 columns">
+                      <label>Year  <input type="text" placeholder="large-4.columns"   class="span2"  /> </label>
+                    </div>
+                    <div class="large-8 columns">
+                      <label>Vehicle Make   <input type="text" placeholder="large-8.columns" /> </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-12 columns">
+                      <label>Vehicle Model  <input type="text" placeholder="large-12.columns" />  </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-12 columns">
+                      <label>Comments  <textarea placeholder="small-12.columns"></textarea> </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="small-4 columns"> <a href="#" class="button  mg-button-wide radius expand postfix">Save</a> </div>
+                  </div>
+                  <!-- <div class="large-12 small-12 cell">
+                    <button href="#" class="button mg-button-wide radius expand postfix">Save</button>
+                  </div> -->
+
+                </form>
+              </div>
+    <!-- =======  modal - reveal ends  ===========  -->
+    </div>
+  </div>
+
+  <div class="grid-x grid-margin-x mg-vehicle-heading mg-buttonrow ">
+    <div class="cell large-7 medium-7 small-7 mg-heading-cell align-right">
+      <h2 class="mg-pageheading">My Vehicles</h2>
+    </div>
+    <div class="cell large-5 medium-5 small-5 cell  align-right">
+    <ul class="menu simple  align-right">
+      <li><a class="button info radius expand" data-open="vehicleModal1">Add a Vehicle </a></li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x mg-vehicle-item">
+    <div class="large-11 medium-12 small-12 cell mg-vehicle-details">
+      <h4><span class="mg-blueyear">2011</span> Audi  <span class="mg-vehicle-info">Color and model</span> </h4>
+      
+      <ul class="menu simple button-group even-3">
+        <li><a class="button mg-button-short radius" href="/servicerecords">View  Records</a></li>
+        <li><a  class="button mg-button-short radius" data-open="vehicleModal1">Edit Vehicle </a></li>
+        <li><a  class="button mg-button-short radius secondary" href="/">Delete Vehicle</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x mg-vehicle-item">
+    <div class="large-11 medium-12 small-12 cell mg-vehicle-details">
+      <h4><span class="mg-blueyear">2010</span> Mercedes  <span class="mg-vehicle-info">Color and model</span> </h4>
+      <ul class="menu simple button-group even-3">
+        <li><a class="button mg-button-short radius" href="/servicerecords">View Records</a></li>
+        <li><a  class="button mg-button-short adius" data-open="vehicleModal1">Edit Vehicle </a></li>
+        <li><a  class="button mg-button-short radius secondary" href="/">Delete Vehicle</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+

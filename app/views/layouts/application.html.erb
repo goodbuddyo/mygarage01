@@ -1,17 +1,98 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mygarage01</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-  </body>
+<body class="mg-body ">
+
+<!-- application.html.erb is a wrapper file forevery page within the project -->
+<!-- Start Top Bar will appear in every page within the project -->
+<div class="grid-container">
+
+  <div class="mg-top-bar medium-12 large-12 columns mg-vehicle-wrapper">
+    <div class="grid-x grid-margin-x mg-vehicle-heading mg-buttonrow ">
+      <div class="large-5 medium-5 small-5 cell">
+        <ul class="menu float-left mg-topmenu" >
+          <li class=" menu-text float-left mg-topmenuli"> 
+          <a class="mg-brand-link" href="/">The Garage</a></li>
+        </ul>
+      </div>
+      <div class="large-7 medium-7 small-7 cell  align-right float-right">
+         <ul class="menu float-right mg-topmenu" >
+        <% if user_signed_in? %>
+          <li class=" menu-text float-right mg-topmenuli mg-topmenuli-rt"> 
+            <%= current_user.email %>
+            </li>
+            <li class=" menu-text float-right mg-topmenuli mg-topmenuli-rt"> 
+            <%= link_to "Log Out", destroy_user_session_path, method: 'DELETE' %> 
+          </li>
+        <% else %>
+          <li class=" menu-text  float-right mg-topmenuli">  
+          <%= link_to "Log In", new_user_session_path %> 
+           <span> or </span>
+          <%= link_to "Sign Up", new_user_registration_path %>  
+          </li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+   </div>
+  <!-- End Top Bar -->
+
+  <div class="callout large primary mg-jumbo">
+    <div class="row column text-center">
+
+      <div class="grid-x grid-padding-x mg-toptext">
+        <div class="large-5 medium-5 small-5 cell">
+          <h4 class="subheader text-right">Welcome to the</h4>
+        </div>
+
+        <div class="large-1 medium-1 small-1 cell">
+         <span class="mg-microtext">Garage</span>
+        </div>
+
+        <div class="large-6 medium-6 small-6 cell">
+          <!--   <p class="mg-introtext">A vehicle service log app.</p> -->
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row column ">
+
+      <div class="grid-x grid-padding-x mg-toptext">
+        <div class="large-12 medium-12 small-12 cell">
+          <p class="mg-introtextbottom">A vehicle service log app.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--  end callout -->
+
+  <div class="row medium-8 large-7 columns">
+    <div class="mg-yieldcontent">
+      <!-- <p>Rails dynamic content displays here. </p> -->
+      <%= yield %>
+      <!-- <p>Rails dynamic content ends here. </p> -->
+    </div>
+  </div>
+
+</div>
+<!--  end grid-container -->
+
+<!--   jquery-2.1.4.min.js and foundation.js are added (required) in applicaiton.js  -->
+
+
+</body>
 </html>
