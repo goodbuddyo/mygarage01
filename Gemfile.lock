@@ -228,7 +228,7 @@ DEPENDENCIES
   chromedriver-helper
   devise
   font-awesome-sass
-  foundation-rails
+  foundation-rails (~> 6.5, >= 6.5.3.0)
   jbuilder (~> 2.5)
   jquery (~> 0.0.1)
   jquery-rails (~> 4.3, >= 4.3.1)
@@ -237,7 +237,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
-  sass-rails
+  sass-rails (~> 5.0, >= 5.0.7)
   sassc
   selenium-webdriver
   spring

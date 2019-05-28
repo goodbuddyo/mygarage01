@@ -12,25 +12,25 @@
  *
  *= require_tree .
  *= require_self
-  *= require foundation_and_overrides
- */
-
- /*
- *= require jquery-ui
-
- *= require foundation 
- */
+ *= require foundation_and_overrides
+*/
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "foundation_and_overrides";
 
- @import "foundation_and_overrides";
+/*
+ *= require jquery-ui
+*/
+
+/*= require foundation
+*/
+
 /* Add imports of custom sass/scss files here */
 
+/* begin mg-addition css */
 
- /* begin mg-addition css */
-
- /* div { border-top: solid 0.5px red; } */
+/* div { border-top: solid 0.5px red; } */
 
 .mg-body div.mg-top-bar { background-color:#aac6d8;}
 .menu.mg-topmenu li.menu-text.mg-topmenuli-rt { font-size: 0.76rem;  text-align: right;  padding-top: 0.9rem;}
@@ -137,15 +137,6 @@ button.button.radius,
  .mg-service-date { padding-right:2.0rem; font-size: 0.99rem;}
 
 }
-
-
-
-
-
-
-
-
-
 
 
 

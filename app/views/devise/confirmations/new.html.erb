@@ -1,16 +1,26 @@
-<h2>Resend confirmation instructions</h2>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+<div class="row medium-12 large-10 columns mg-vehicle-wrapper">
+  <div class="grid-x grid-padding-x mg-toptext">
+    <div class="small-12 medium-12 large-12  cell mg-form-div">
+
+      <h5 class="mg-login-h5">esend confirmation instructions</h5>
+
+    <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field  mg-login-input ">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+      </div>
+
+      <div class="actions  mg-loginbutton ">
+        <%= f.submit "Resend confirmation instructions" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

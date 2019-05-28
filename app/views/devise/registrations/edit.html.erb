@@ -1,10 +1,10 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h5 class="mg-login-h5">Edit <%= resource_name.to_s.humanize %></h5>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="field mg-login-input ">
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
@@ -12,26 +12,25 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div class="field mg-login-input ">
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i> 
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em   class=" mg-login-input-em "><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
+  <div class="field mg-login-input">
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div class="field mg-login-input mg-login-input-with-i">
+    <%= f.label :current_password %> <i class="mg-login-input-i">(we need your current password to confirm your changes)</i>
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
-  <div class="actions">
+  <div class="actions  mg-loginbutton ">
     <%= f.submit "Update" %>
   </div>
 <% end %>

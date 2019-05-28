@@ -15,14 +15,26 @@
 
 //= require_tree .
 
+
 //= require jquery
-
+//= require jquery_ujs
 //= require jquery-ui
+//= require foundation
 
+
+$(function() {
+  $(document).foundation();
+});
+
+/*  https://foundation.zurb.com/forum/posts/53729-foundation-method-dont-work-with-webpack */
+
+// Assuming jQuery is loaded as a global $
+// See: https://webpack.js.org/plugins/provide-plugin/
+// This was the KEY to getting Foundation 6.4 working for me.
 Foundation.addToJquery($);
 
-$(document).foundation();
+const element = new Reveal($('#element'));
+// element.open();
+// See: http://foundation.zurb.com/sites/docs/javascript.html
 
-//= require foundation
-$(function(){ $(document).foundation(); });
 

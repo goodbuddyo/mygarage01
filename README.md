@@ -12,6 +12,9 @@ MyGarage01 is an app for logging auto service entries using React on Rails and t
   postgresql
   sass-rails
   devise
+  jquery-rails
+  jquery-ui
+  foundation-rails
 
 * Configuration
 * Database creation
